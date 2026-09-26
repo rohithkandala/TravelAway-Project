@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="auth-card">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1>Sign in to TravelAway</h1>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" data-role="customer">Customer</button>
+            <button class="tab-btn" data-role="employee">Employee</button>
+        </div>
+
+        <form id="loginForm">
+            <label>Email ID
+                <input id="emailId" type="email" maxlength="50" required>
+            </label>
+            <label>Password
+                <input id="password" type="password" maxlength="16" required>
+            </label>
+            <button class="btn btn-primary full-width" type="submit">Login</button>
+        </form>
+
+        <div id="loginMessage" class="message"></div>
+        <p class="form-footer">New customer? <a href="register.html">Create an account</a></p>
+    </div>
+</main>
+
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="admin.html">Admin</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-container">
+    <section class="section-heading">
+        <p class="eyebrow">ADMINISTRATION</p>
+        <h1>TravelAway Admin</h1>
+        <p>Use the APIs exposed by TravelAwayController.</p>
+    </section>
+
+    <div class="admin-grid">
+        <section class="form-card">
+            <h2>Add Hotel</h2>
+            <form id="hotelForm">
+                <label>Hotel Name<input id="hotelName" maxlength="20" required></label>
+                <label>Hotel Rating
+                    <select id="hotelRating" required>
+                        <option value="">Select</option>
+                        <option>2</option><option>3</option><option>4</option><option>5</option>
+                    </select>
+                </label>
+                <label>Single Room Price<input id="singleRoomPrice" type="number" min="0" required></label>
+                <label>Double Room Price<input id="doubleRoomPrice" type="number" min="0" required></label>
+                <label>Deluxe Room Price<input id="deluxeeRoomPrice" type="number" min="0" required></label>
+                <label>Suite Room Price<input id="suiteRoomPrice" type="number" min="0" required></label>
+                <label>City<input id="hotelCity" maxlength="20" required></label>
+                <button class="btn btn-primary" type="submit">Add Hotel</button>
+            </form>
+            <div id="hotelMessage" class="message"></div>
+        </section>
+
+        <section class="form-card">
+            <h2>Add Vehicle</h2>
+            <form id="vehicleForm">
+                <label>Vehicle Name<input id="vehicleName" maxlength="20" required></label>
+                <label>Vehicle Type
+                    <select id="vehicleType" required>
+                        <option value="">Select</option>
+                        <option>Two-Wheeler</option>
+                        <option>Four-Wheeler</option>
+                        <option>Mini-Bus</option>
+                    </select>
+                </label>
+                <label>Rate Per Hour<input id="ratePerHour" type="number" min="0" step="0.01" required></label>
+                <label>Rate Per Km<input id="ratePerKm" type="number" min="0" step="0.01" required></label>
+                <label>Base Price<input id="basePrice" type="number" min="0" step="0.01" required></label>
+                <button class="btn btn-primary" type="submit">Add Vehicle</button>
+            </form>
+            <div id="vehicleMessage" class="message"></div>
+        </section>
+
+        <section class="form-card">
+            <h2>Customer Care</h2>
+            <form id="careForm">
+                <label>Booking ID<input id="careBookingId" type="number" required></label>
+                <label>Query<textarea id="query" maxlength="100" required></textarea></label>
+                <label>Query Status
+                    <select id="queryStatus" required>
+                        <option>Assigned</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </label>
+                <label>Assignee
+                    <div class="inline-form">
+                        <input id="assignee" type="number" readonly required>
+                        <button id="getAssignee" class="btn btn-outline" type="button">Get Assignee</button>
+                    </div>
+                </label>
+                <label>Query Answer<textarea id="queryAnswer" maxlength="200"></textarea></label>
+                <button class="btn btn-primary" type="submit">Add Customer Care Entry</button>
+            </form>
+            <div id="careMessage" class="message"></div>
+        </section>
+
+        <section class="form-card">
+            <h2>Reference Data</h2>
+            <div class="inline-actions">
+                <button id="loadHotels" class="btn btn-outline" type="button">Load Hotels</button>
+                <button id="loadVehicles" class="btn btn-outline" type="button">Load Vehicles</button>
+            </div>
+            <div id="referenceData" class="reference-data"></div>
+        </section>
+    </div>
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

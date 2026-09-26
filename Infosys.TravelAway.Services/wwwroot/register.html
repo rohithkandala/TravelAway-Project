@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="form-card wide-card">
+        <p class="eyebrow">JOIN TRAVELAWAY</p>
+        <h1>Create your customer account</h1>
+
+        <form id="registerForm" class="form-grid">
+            <label>First Name
+                <input id="firstName" required pattern="[A-Za-z]+" maxlength="50">
+            </label>
+            <label>Last Name
+                <input id="lastName" required pattern="[A-Za-z]+" maxlength="50">
+            </label>
+            <label>Email ID
+                <input id="emailId" type="email" maxlength="50" required>
+            </label>
+            <label>Password
+                <input id="password" type="password" minlength="8" maxlength="15" required>
+            </label>
+            <label>Gender
+                <select id="gender" required>
+                    <option value="">Select</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </label>
+            <label>Contact Number
+                <input id="contactNumber" type="tel" inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10" required>
+            </label>
+            <label>Date of Birth
+                <input id="dateOfBirth" type="date" required>
+            </label>
+            <label class="span-2">Address
+                <textarea id="address" maxlength="250" required></textarea>
+            </label>
+            <div class="span-2">
+                <button class="btn btn-primary full-width" type="submit">Register</button>
+            </div>
+        </form>
+        <div id="registerMessage" class="message"></div>
+    </div>
+</main>
+
+<script src="js/register.js"></script>
+</body>
+</html>

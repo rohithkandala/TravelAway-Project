@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Book Package</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="booking.html">Book</a>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-container">
+    <section class="section-heading">
+        <p class="eyebrow">PLAN YOUR TRIP</p>
+        <h1>Book a Package</h1>
+        <p>Select a package, enter travel details, then optionally add accommodation.</p>
+    </section>
+
+    <div class="booking-layout">
+        <section class="form-card">
+            <h2>1. Package & Travel Details</h2>
+            <form id="bookingForm">
+                <label>Package
+                    <select id="packageSelect" required>
+                        <option value="">Loading packages...</option>
+                    </select>
+                </label>
+                <div id="packageSummary" class="info-panel">Select a package to see details.</div>
+
+                <div class="form-grid">
+                    <label>Contact Number
+                        <input id="contactNumber" type="tel" inputmode="numeric" pattern="[1-9][0-9]{9}" maxlength="10" required>
+                    </label>
+                    <label>Date of Travel
+                        <input id="dateOfTravel" type="date" required>
+                    </label>
+                    <label>Adults
+                        <input id="numberOfAdults" type="number" min="1" value="1" required>
+                    </label>
+                    <label>Children
+                        <input id="numberOfChildren" type="number" min="0" value="0">
+                    </label>
+                    <label class="span-2">Address
+                        <textarea id="address" maxlength="100" required></textarea>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Create Package Booking</button>
+            </form>
+            <div id="bookingMessage" class="message"></div>
+        </section>
+
+        <aside class="form-card">
+            <h2>2. Accommodation</h2>
+            <p class="muted">Accommodation can be added after a booking ID is created.</p>
+
+            <form id="accommodationForm">
+                <label>Booking ID
+                    <input id="accommodationBookingId" type="number" required>
+                </label>
+                <label>City
+                    <input id="accommodationCity" required maxlength="20">
+                </label>
+                <label>Hotel Rating
+                    <select id="hotelRating" required>
+                        <option value="">Select rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </label>
+                <label>Hotel
+                    <select id="hotelSelect" required>
+                        <option value="">Select city/rating first</option>
+                    </select>
+                </label>
+                <label>Room Type
+                    <select id="roomType" required>
+                        <option value="">Select</option>
+                        <option>Single</option>
+                        <option>Double</option>
+                        <option>Deluxe</option>
+                        <option>Suite</option>
+                    </select>
+                </label>
+                <label>Number of Rooms
+                    <input id="numberOfRooms" type="number" min="1" value="1" required>
+                </label>
+                <label>Estimated Cost
+                    <input id="estimatedCost" type="number" min="0" step="1" readonly>
+                </label>
+                <button class="btn btn-secondary" type="submit">Add Accommodation</button>
+            </form>
+            <div id="accommodationMessage" class="message"></div>
+
+            <hr>
+
+            <h2>3. Vehicles</h2>
+            <p class="muted">Vehicles are loaded from the controller. The current controller exposes vehicle listing but does not expose a vehicle-booking POST endpoint.</p>
+            <label>Vehicle
+                <select id="vehicleSelect">
+                    <option value="">Loading vehicles...</option>
+                </select>
+            </label>
+            <div id="vehicleInfo" class="info-panel">Select a vehicle.</div>
+
+            <hr>
+
+            <h2>4. Booking Total</h2>
+            <div class="total-row">
+                <span>Total from backend</span>
+                <strong id="bookingTotal">₹0</strong>
+            </div>
+            <button class="btn btn-outline full-width" id="refreshTotal" type="button">Refresh Total</button>
+            <a class="btn btn-primary full-width center-btn" href="payment.html">Continue to Payment</a>
+        </aside>
+    </div>
+</main>
+
+<script src="js/booking.js"></script>
+</body>
+</html>

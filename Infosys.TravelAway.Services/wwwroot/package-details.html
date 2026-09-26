@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="TravelAway - Explore beautiful destinations and unforgettable travel experiences.">
+
+    <title>TravelAway - Explore Your World</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">✈</span>
+                <span>TravelAway</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#packages">Packages</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    DISCOVER THE WORLD
+                </p>
+
+                <h1>
+                    Your Journey<br>
+                    Begins Here
+                </h1>
+
+                <p class="hero-description">
+                    Explore beautiful destinations, discover amazing
+                    experiences and create unforgettable memories.
+                </p>
+
+                <a href="#packages" class="hero-button">
+                    Explore Packages
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PACKAGES SECTION
+    ====================================================== -->
+
+    <main class="main-container" id="packages">
+
+        <div class="section-heading">
+
+            <p class="section-small-title">
+                EXPLORE DESTINATIONS
+            </p>
+
+            <h2>
+                Find Your Perfect Journey
+            </h2>
+
+            <p>
+                Choose a category and explore our travel packages.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CATEGORY FILTER
+        ================================================== -->
+
+        <div class="category-wrapper">
+
+            <div class="category-container"
+                 id="categoryContainer">
+
+                <button class="category-btn active"
+                        data-category-id="all">
+                    All
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PACKAGE CARDS
+        ================================================== -->
+
+        <div class="package-grid"
+             id="packageContainer">
+
+            <div class="loading">
+                Loading packages...
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         PACKAGE DETAILS MODAL
+    ====================================================== -->
+
+    <div class="modal"
+         id="packageModal"
+         aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button class="modal-close"
+                    type="button"
+                    onclick="closeModal()"
+                    aria-label="Close">
+                &times;
+            </button>
+
+            <div id="packageDetails">
+
+                <div class="loading">
+                    Loading details...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ABOUT SECTION
+    ====================================================== -->
+
+    <section class="about-section"
+             id="about">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <p class="section-small-title">
+                    ABOUT TRAVELAWAY
+                </p>
+
+                <h2>
+                    Travel. Explore. Experience.
+                </h2>
+
+                <p>
+                    TravelAway helps you discover exciting destinations
+                    and plan memorable journeys. Explore domestic and
+                    international destinations with our curated packages.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer id="contact">
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h3>
+                    TravelAway
+                </h3>
+
+                <p>
+                    Your journey starts with us.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    Email: support@travelaway.com
+                </p>
+
+                <p>
+                    Phone: +91 98765 43210
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 TravelAway. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

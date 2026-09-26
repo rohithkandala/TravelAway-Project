@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Explore Your World</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a class="active" href="index.html">Home</a>
+            <a href="index.html#packages">Packages</a>
+            <a href="booking.html">Book</a>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="profile.html">Profile</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html" id="loginNav">Login</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <p class="eyebrow">DISCOVER THE WORLD</p>
+            <h1>Your Journey<br>Begins Here</h1>
+            <p>Explore beautiful destinations, discover amazing experiences and create unforgettable memories.</p>
+            <a class="btn btn-primary" href="#packages">Explore Packages</a>
+        </div>
+    </div>
+</section>
+
+<main class="main-container" id="packages">
+    <section class="section-heading">
+        <p class="eyebrow">EXPLORE DESTINATIONS</p>
+        <h2>Find Your Perfect Journey</h2>
+        <p>Choose a category and explore our travel packages.</p>
+    </section>
+
+    <div id="categoryContainer" class="category-container"></div>
+    <div id="packageContainer" class="package-grid">
+        <div class="loading">Loading packages...</div>
+    </div>
+</main>
+
+<div id="packageModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <button class="modal-close" type="button" id="modalClose">&times;</button>
+        <div id="packageDetails"></div>
+    </div>
+</div>
+
+<section class="about-section" id="about">
+    <div class="about-container">
+        <p class="eyebrow">ABOUT TRAVELAWAY</p>
+        <h2>Travel. Explore. Experience.</h2>
+        <p>TravelAway helps you discover exciting destinations and plan memorable journeys with curated domestic and international packages.</p>
+        <div class="quick-links">
+            <a class="btn btn-outline" href="booking.html">Start a Booking</a>
+            <a class="btn btn-outline" href="register.html">Create Account</a>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-container">
+        <div>
+            <h3>TravelAway</h3>
+            <p>Your journey starts with us.</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Email: rohithkandala9@gmail.com</p>
+            <p>Phone: +91 77990 81979</p>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2026 TravelAway. All Rights Reserved.</div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>

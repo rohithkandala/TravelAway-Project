@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book</a>
+            <a class="active" href="payment.html">Payment</a>
+            <a href="my-bookings.html">My Bookings</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="form-card">
+        <p class="eyebrow">CHECKOUT</p>
+        <h1>Payment</h1>
+        <p class="muted">The backend Payment API accepts BookingId, TotalAmount and PaymentStatus.</p>
+
+        <form id="paymentForm">
+            <label>Booking ID
+                <input id="bookingId" type="number" required>
+            </label>
+            <label>Total Amount
+                <input id="totalAmount" type="number" min="0" step="1" required>
+            </label>
+            <label>Payment Status
+                <select id="paymentStatus" required>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Not Confirmed">Not Confirmed</option>
+                </select>
+            </label>
+
+            <button class="btn btn-primary full-width" type="submit">Submit Payment</button>
+        </form>
+
+        <div id="paymentMessage" class="message"></div>
+    </div>
+</main>
+
+<script src="js/payment.js"></script>
+</body>
+</html>

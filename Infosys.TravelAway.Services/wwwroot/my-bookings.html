@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAway - My Bookings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+        <a class="logo" href="index.html"><span>✈</span> TravelAway</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book</a>
+            <a class="active" href="my-bookings.html">My Bookings</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-container">
+    <section class="section-heading">
+        <p class="eyebrow">YOUR TRIPS</p>
+        <h1>My Bookings</h1>
+        <p>Enter your customer email to retrieve booked packages.</p>
+    </section>
+
+    <section class="form-card compact-card">
+        <form id="bookingsForm" class="inline-form">
+            <input id="emailId" type="email" placeholder="Email ID" required>
+            <button class="btn btn-primary" type="submit">Load Bookings</button>
+        </form>
+        <div id="bookingsMessage" class="message"></div>
+    </section>
+
+    <section id="bookingsContainer" class="booking-list"></section>
+</main>
+
+<script src="js/bookings.js"></script>
+</body>
+</html>
